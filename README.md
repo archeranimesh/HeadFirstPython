@@ -12,6 +12,15 @@ I am giving all necessary reference and credits for these notes.
 2. [Chapter 02 : List Data ](DOCS/Chapter_02-List-Data/ReadMe.md)
 3. [Chapter 03 : Structured Data ](DOCS/Chapter_03-Structured-Data/ReadMe.md)
 4. [Chapter 04 : Code Reuse ](DOCS/Chapter_04-Code-Reuse/ReadMe.md)
+5. [Chapter 05 : Building a WebApp ](DOCS/Chapter_05-Building-A-WebApp/ReadMe.md)
+6. [Chapter 06 : Storing and Manipulating Data ](DOCS/Chapter_06-Storing-And-Manipulating-Data/ReadMe.md)
+7. [Chapter 07 : Using a Database ](DOCS/Chapter_07-Using-A-Database/ReadMe.md)
+8. [Chapter 08 : A Little Bit of Class ](DOCS/Chapter_08-A-Little-Bit-Of-Class/ReadMe.md)
+9. [Chapter 09 : The Context management protocol ](DOCS/Chapter_09-The-Context-Management-Protocol/ReadMe.md)
+10. [Chapter 10 : Function Decorators ](DOCS/Chapter_10-Function-Decorators/ReadMe.md)
+11. [Chapter 11 : Exception Handling ](DOCS/Chapter_11-Exception-Handling/ReadMe.md)
+12. [Chapter 12 : A Little Bit of Threading ](DOCS/Chapter_12-A-Little-Bit-Of-Threading/ReadMe.md)
+13. [Chapter 13 : Advanced Iteration ](DOCS/Chapter_13-Advanced-Iteration/ReadMe.md)
 
 
 ## Setup of a new Python Repository with Virtual environment and VS Code ##

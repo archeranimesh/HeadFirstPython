@@ -234,6 +234,10 @@ def decorator_name(func):
     - Using the function name gives the function object, which can be used just like any other variable.
 * We can invoke the passed function as an arguments.
 * A function can be nested inside an enclosing function's suite.
+* A function can also be returned.
+* `*args` = expand to a list of items
+* `**kwargs` = expand to a dictionary of K,V
+* 
 
 
 
