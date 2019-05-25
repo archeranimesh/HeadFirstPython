@@ -81,6 +81,17 @@ def gen_from_urls(urls: tuple) -> tuple:
 * When a functions sees a `yield` statement, it returns only the current value,
 
 
+## Bullet Points ##
+* Python has many different modules in built to work on data, `open()` is one, `csv` module is another.
+* Method chaining helps in multiple things done in a single line of code.
+* While chaining methods care should be taken, about the data structure returned by the function.
+* `for` loop can be reworked into a comprehension.
+* Comprehension can used to process existing list, dict, or sets.
+* There is nothing called tuple comprehension, as tuple are immutable.
+* Generator looks a lot like a tuple comprehension, and uses `yield ` to generate data.
+
+
+
 ## Reference ##
 * [Python time strftime() Method ](https://www.tutorialspoint.com/python/time_strftime.htm)
 * [Python time strptime() Method](https://www.tutorialspoint.com/python/time_strptime.htm)
