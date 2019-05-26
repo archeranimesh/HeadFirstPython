@@ -70,6 +70,16 @@ for i in (x ** 3 for x in [1, 2, 3, 4, 5]):
 * We can replace the same concept but surround it with `()` making it a generator.
 * A generator returns only 1 items at a time.
 
+````python
+def gen_from_urls(urls: tuple) -> tuple:
+    for resp in (requests.get(url) for url in urls):
+        # yield returns only 1 items at a time.
+        yield len(resp.content), resp.status_code, resp.url
+````
+
+* When a functions executes a `return` statement, the function terminates.
+* When a functions sees a `yield` statement, it returns only the current value,
+
 
 ## Reference ##
 * [Python time strftime() Method ](https://www.tutorialspoint.com/python/time_strftime.htm)
