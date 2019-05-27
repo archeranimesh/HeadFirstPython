@@ -58,6 +58,18 @@
     - The above is an example of set comprehension, it is almost similar to Dictionary comprehension.
     - The main difference between the set and dict comprehension, is the absence `:` in set comprehension.
 
+### Tuple Comprehension or Generator ###
+
+````python
+for i in (x ** 3 for x in [1, 2, 3, 4, 5]):
+    print(i)
+````
+* Though the above code looks to be using tuple comprehension, but actually the code within `()` creates an generator.
+* When we use list comprehension, all the intermediate data for the comprehensions are stored and then finally the combined data is returned.
+* This can cause issues of memory.
+* We can replace the same concept but surround it with `()` making it a generator.
+* A generator returns only 1 items at a time.
+
 
 ## Reference ##
 * [Python time strftime() Method ](https://www.tutorialspoint.com/python/time_strftime.htm)
