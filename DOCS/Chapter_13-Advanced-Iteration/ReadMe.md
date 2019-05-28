@@ -53,6 +53,10 @@
     * `filtered_flights = {convert2ampm(k): v.title() for k, v in flights.items() if v == "FREEPORT"}` 
         - Everything happens like before, only the value of `k` and `v` is stored when `v == "FREEPORT"` condition is matched.
 
+### Set Comprehension ###
+* `found2 = {v for v in vowels if v in message}`
+    - The above is an example of set comprehension, it is almost similar to Dictionary comprehension.
+    - The main difference between the set and dict comprehension, is the absence `:` in set comprehension.
 
 
 ## Reference ##
