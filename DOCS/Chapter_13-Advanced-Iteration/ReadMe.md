@@ -53,3 +53,9 @@
     * `filtered_flights = {convert2ampm(k): v.title() for k, v in flights.items() if v == "FREEPORT"}` 
         - Everything happens like before, only the value of `k` and `v` is stored when `v == "FREEPORT"` condition is matched.
 
+
+
+## Reference ##
+* [Python time strftime() Method ](https://www.tutorialspoint.com/python/time_strftime.htm)
+* [Python time strptime() Method](https://www.tutorialspoint.com/python/time_strptime.htm)
+  

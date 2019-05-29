@@ -39,3 +39,18 @@ filtered_flights = {
     convert2ampm(k): v.title() for k, v in flights.items() if v == "FREEPORT"
 }
 pprint.pprint(filtered_flights)
+
+print()
+print("--------City to Time-------")
+when = {}
+for dest in set(flights.values()):
+    when[dest] = [k for k, v in flights.items() if v == dest]
+
+pprint.pprint(when)
+
+print()
+print("--------[City to Time]-------")
+when2 = {
+    dest: [k for k, v in flights.items() if v == dest] for dest in set(flights.values())
+}
+pprint.pprint(when2)
