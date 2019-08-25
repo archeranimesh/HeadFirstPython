@@ -31,3 +31,11 @@ more_flights = {}
 more_flights = {convert2ampm(k): v.title() for k, v in flights.items()}
 print("------Comprehensions---")
 pprint.pprint(more_flights)
+
+print("------Filter Comprehensions---")
+filtered_flights = {}
+
+filtered_flights = {
+    convert2ampm(k): v.title() for k, v in flights.items() if v == "FREEPORT"
+}
+pprint.pprint(filtered_flights)
