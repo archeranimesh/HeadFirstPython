@@ -24,3 +24,10 @@ for k, v in flights.items():
     flights2[convert2ampm(k)] = v.title()
 
 pprint.pprint(flights2)
+
+# Solving using dict Comphrehension
+more_flights = {}
+
+more_flights = {convert2ampm(k): v.title() for k, v in flights.items()}
+print("------Comprehensions---")
+pprint.pprint(more_flights)
