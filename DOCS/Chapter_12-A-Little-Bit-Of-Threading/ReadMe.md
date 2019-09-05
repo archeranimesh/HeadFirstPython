@@ -46,3 +46,17 @@ information about how to avoid this problem.
 ````
 * What this means is, we might have executed a thread and passed some arguments from the current function to the threaded function.
 * Once the Thread is invoked, the current function finishes its execution, causing the local variables like, the arguments passed to thread as invalid.
+* `Flask` comes for solution with a decorator called `copy_current_request_context`.
+* To use `copy_current_request_context`, decorator the function which is being decorated must be defined inside the calling function.
+* This solution for `copy_current_request_context` works if the decorated function is called from only 1 function.
+
+
+
+
+
+
+
+
+
+
+
