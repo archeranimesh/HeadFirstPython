@@ -3,6 +3,8 @@ from vsearch import search4letters
 from DBcm import UseDatabase, ConnectionError, CredentialsError, SQLError
 from checker import check_logged_in
 from time import sleep
+from threading import Thread
+import traceback
 
 app = Flask(__name__)
 
@@ -48,7 +50,8 @@ def log_request(req: "flask_request", res: str) -> None:
     except SQLError as err:
         print("Is Your Query Correct? Error: ", str(err))
     except Exception as err:
-        print("Something Went wrong: ", str(err))
+        print("Something Went wrong: ", str(err), " ", type(err))
+        # traceback.print_exc()
 
 
 @app.route("/search4", methods=["POST"])
@@ -61,7 +64,9 @@ def do_search() -> "html":
     # Uncomment the below line to raise a exception
     # raise
     results = str(search4letters(phrase, letters))
-    log_request(request, results)
+    # log_request(request, results)
+    t = Thread(target=log_request, args=(request, results))
+    t.start()
     return render_template(
         "results.html",
         the_phrase=phrase,
@@ -94,7 +99,9 @@ def view_the_log() -> str:
     except SQLError as err:
         print("Is Your Query Correct? Error: ", str(err))
     except Exception as err:
-        print("Something Went wrong: ", str(err))
+        print("Something Went wrong: ", str(err), " ", type(err))
+        traceback.print_exc()
+
     return "Error"
 
 

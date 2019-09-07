@@ -34,3 +34,15 @@ from threading import Thread
 t = Thread(target=execute_slowly, args=(glacial, plodding, leaden))
 t.start()
 ````
+
+
+## Error's with Threading ##
+* If it was this easy that the above 3 line can make it parallel execution, then all code in Python would have been parallel.
+* Putting threading into our existing Web application can lead to issues something like this.
+
+````
+This typically means that you attempted to use functionality that needed an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+````
+* What this means is, we might have executed a thread and passed some arguments from the current function to the threaded function.
+* Once the Thread is invoked, the current function finishes its execution, causing the local variables like, the arguments passed to thread as invalid.
