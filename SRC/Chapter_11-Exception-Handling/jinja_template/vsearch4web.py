@@ -27,19 +27,28 @@ def entry_page() -> "html":
 
 # Added log_request, fo adding all request and response onto a file.
 def log_request(req: "flask_request", res: str) -> None:
-    with UseDatabase(app.config["dbconfig"]) as cursor:
-        _SQL = """insert into log (phrase, letters, ip, browser_string, results)
-                values (%s, %s, %s, %s, %s)"""
-        cursor.execute(
-            _SQL,
-            (
-                req.form["phrase"],
-                req.form["letters"],
-                req.remote_addr,
-                req.user_agent.browser,
-                res,
-            ),
-        )
+    try:
+        with UseDatabase(app.config["dbconfig"]) as cursor:
+            _SQL = """insert into log (phrase, letters, ip, browser_string, results)
+                    values (%s, %s, %s, %s, %s)"""
+            cursor.execute(
+                _SQL,
+                (
+                    req.form["phrase"],
+                    req.form["letters"],
+                    req.remote_addr,
+                    req.user_agent.browser,
+                    res,
+                ),
+            )
+    except ConnectionError as err:
+        print("Is your database switched on ? Error: ", str(err))
+    except CredentialsError as err:
+        print("User-id/Password issues. Error: ", str(err))
+    except SQLError as err:
+        print("Is Your Query Correct? Error: ", str(err))
+    except Exception as err:
+        print("Something Went wrong: ", str(err))
 
 
 @app.route("/search4", methods=["POST"])
@@ -68,7 +77,7 @@ def view_the_log() -> str:
     """ Display the content of the log file as a HTML Table"""
     try:
         with UseDatabase(app.config["dbconfig"]) as cursor:
-            _SQL = """select phrase, letters, ip, browser_string, results from log1"""
+            _SQL = """select phrase, letters, ip, browser_string, results from log"""
             cursor.execute(_SQL)
             contents = cursor.fetchall()
         titles = ("Form Data", "Remote_addr", "User_agent", "Results")
