@@ -84,11 +84,14 @@ except PermissionError as px:
     - `exc_type` - give the exception type
     - `exc_value` - gives the exception value
     - `exc_trace` - gives the exception trace.
+* If an exception occurs in the `with` statement the Error is sent to the `__exit__` function.
+* The handling of the exception should happen at the end else the `__exit__` code will not execute.
 
 ## Custom Exception ##
 * We can create custom exception if we know
     - Exception name
     - define an empty class with that name.
     - This empty class inherits from the `Exception` class.
+
 
 

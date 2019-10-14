@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, escape, session
 from vsearch import search4letters
-from DBcm import UseDatabase, ConnectionError, CredentialsError
+from DBcm import UseDatabase, ConnectionError, CredentialsError, SQLError
 from checker import check_logged_in
 from time import sleep
 
@@ -12,7 +12,7 @@ app.secret_key = "HowIsLife"
 app.config["dbconfig"] = {
     "host": "127.0.0.1",
     "user": "vsearch",
-    "password": "hello1",
+    "password": "hello",
     "database": "vsearchlogDB",
 }
 
@@ -68,7 +68,7 @@ def view_the_log() -> str:
     """ Display the content of the log file as a HTML Table"""
     try:
         with UseDatabase(app.config["dbconfig"]) as cursor:
-            _SQL = """select phrase, letters, ip, browser_string, results from log"""
+            _SQL = """select phrase, letters, ip, browser_string, results from log1"""
             cursor.execute(_SQL)
             contents = cursor.fetchall()
         titles = ("Form Data", "Remote_addr", "User_agent", "Results")
@@ -82,6 +82,8 @@ def view_the_log() -> str:
         print("Is your database switched on ? Error: ", str(err))
     except CredentialsError as err:
         print("User-id/Password issues. Error: ", str(err))
+    except SQLError as err:
+        print("Is Your Query Correct? Error: ", str(err))
     except Exception as err:
         print("Something Went wrong: ", str(err))
     return "Error"
