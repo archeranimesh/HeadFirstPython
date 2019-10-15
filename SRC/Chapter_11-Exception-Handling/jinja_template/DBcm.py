@@ -5,6 +5,10 @@ class ConnectionError(Exception):
     pass
 
 
+class CredentialsError(Exception):
+    pass
+
+
 class UseDatabase:
     # this method performs initialization
     def __init__(self, config: dict) -> None:
@@ -18,6 +22,8 @@ class UseDatabase:
             return self.cursor
         except mysql.connector.errors.InterfaceError as err:
             raise ConnectionError(err)
+        except mysql.connector.errors.ProgrammingError as err:
+            raise CredentialsError(err)
 
     # https://stackoverflow.com/questions/1984325/explaining-pythons-enter-and-exit
     # this method hold's the teardown code.
