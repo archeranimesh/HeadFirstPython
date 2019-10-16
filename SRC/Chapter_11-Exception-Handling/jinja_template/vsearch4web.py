@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, escape, session
 from vsearch import search4letters
-from DBcm import UseDatabase
+from DBcm import UseDatabase, ConnectionError
 from checker import check_logged_in
 from time import sleep
 
@@ -66,14 +66,22 @@ def do_search() -> "html":
 @check_logged_in
 def view_the_log() -> str:
     """ Display the content of the log file as a HTML Table"""
-    with UseDatabase(app.config["dbconfig"]) as cursor:
-        _SQL = """select phrase, letters, ip, browser_string, results from log"""
-        cursor.execute(_SQL)
-        contents = cursor.fetchall()
-    titles = ("Form Data", "Remote_addr", "User_agent", "Results")
-    return render_template(
-        "viewlog.html", the_title="View Log", the_row_titles=titles, the_data=contents,
-    )
+    try:
+        with UseDatabase(app.config["dbconfig"]) as cursor:
+            _SQL = """select phrase, letters, ip, browser_string, results from log"""
+            cursor.execute(_SQL)
+            contents = cursor.fetchall()
+        titles = ("Form Data", "Remote_addr", "User_agent", "Results")
+        return render_template(
+            "viewlog.html",
+            the_title="View Log",
+            the_row_titles=titles,
+            the_data=contents,
+        )
+    except ConnectionError as err:
+        print("Is your database switched on ? Error: ", str(err))
+    except Exception as err:
+        print("Something Went wrong: ", str(err))
 
 
 @app.route("/login")
