@@ -72,3 +72,23 @@ except PermissionError as px:
     - 3rd value contains the traceback object.
 * Python can extend the `try/except` to provide much better details.
 * We can extend the `except` with `as` keyword, which gives the proper error object.
+
+## Tight Coupling ##
+* In our web application we can protect our code using exception in places where we suspect.
+* This causes issues with modularity of the code. We create a tight coupling with the particular DB type.
+* With the help of abstraction we should make sure that our code has minimal impact if we change the DB type.
+
+## __exit__ function ##
+* In our web application we used the all the DB related code in a single file.
+* We had a `__exit__` function implemented which took 3 parameters.
+    - `exc_type` - give the exception type
+    - `exc_value` - gives the exception value
+    - `exc_trace` - gives the exception trace.
+
+## Custom Exception ##
+* We can create custom exception if we know
+    - Exception name
+    - define an empty class with that name.
+    - This empty class inherits from the `Exception` class.
+
+

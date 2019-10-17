@@ -12,7 +12,7 @@ app.secret_key = "HowIsLife"
 app.config["dbconfig"] = {
     "host": "127.0.0.1",
     "user": "vsearch",
-    "password": "hello1",
+    "password": "hello",
     "database": "vsearchlogDB",
 }
 
@@ -52,10 +52,7 @@ def do_search() -> "html":
     # Uncomment the below line to raise a exception
     # raise
     results = str(search4letters(phrase, letters))
-    try:
-        log_request(request, results)
-    except Exception as err:
-        print("***** Logging Failed with this error: ", str(err))
+    log_request(request, results)
     return render_template(
         "results.html",
         the_phrase=phrase,
