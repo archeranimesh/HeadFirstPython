@@ -71,4 +71,4 @@ except PermissionError as px:
     - 2nd value provides exception value
     - 3rd value contains the traceback object.
 * Python can extend the `try/except` to provide much better details.
-* We can extend the `except` with `as` keyword.
+* We can extend the `except` with `as` keyword, which gives the proper error object.
