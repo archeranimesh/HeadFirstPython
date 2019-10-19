@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, escape, session
 from vsearch import search4letters
 from DBcm import UseDatabase
 from checker import check_logged_in
+from time import sleep
 
 app = Flask(__name__)
 
@@ -46,6 +47,10 @@ def do_search() -> "html":
     phrase = request.form["phrase"]
     letters = request.form["letters"]
     title = "Here are your results"
+    # uncommnent below line to create a delay in results
+    # sleep(15)
+    # Uncomment the below line to raise a exception
+    # raise
     results = str(search4letters(phrase, letters))
     log_request(request, results)
     return render_template(
