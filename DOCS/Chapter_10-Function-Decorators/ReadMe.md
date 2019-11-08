@@ -212,6 +212,28 @@ def check_logged_in(func):
     - Return a function from a function
     - How to process any number and type of argument.
 * The only secret sauce is to call the `@wraps(func)` imported from `functools`
+* Logic Abstraction is one of the reasons the 
+* Generic Code Template for decorators
+
+````python
+from functools import wraps
+
+def decorator_name(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+    # 1. Code to execute BEFORE calling the decorated function
+    # 2. Call the decorated function as required, returning its results if needed.
+    # 3. Code to execute INSTEAD of calling the decorated function.
+    return wrapper
+````
+
+
+## Bullet Points ##
+* When you need to store server side state within a Flask webapp, use the `session` dictionary.
+* You can pass a function as an argument to another function.
+    - Using the function name gives the function object, which can be used just like any other variable.
+* We can invoke the passed function as an arguments.
+* A function can be nested inside an enclosing function's suite.
 
 
 
