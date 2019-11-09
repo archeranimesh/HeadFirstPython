@@ -189,8 +189,29 @@ if __name__ == "__main__":
     myfunc_args(1, 2, 3, a=10, b=20, c=30)
 ````
 
+## Custom Function Decorators ##
+
+````python
+from flask import session
+from functools import wraps
 
 
+def check_logged_in(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        if "logged_in" in session:
+            return func(*args, **kwargs)
+        return "You are NOT Logged in"
+    return wrapper
+
+````
+* We can create the custom function decorator as shown above.
+* It still follow the same 4 principal described above.
+    - How to create a function
+    - Pass a function as an argument to a function.
+    - Return a function from a function
+    - How to process any number and type of argument.
+* The only secret sauce is to call the `@wraps(func)` imported from `functools`
 
 
 
