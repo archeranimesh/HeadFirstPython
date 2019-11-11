@@ -166,7 +166,28 @@ if __name__ == "__main__":
     myfunckw(a=10, b=20)
     myfunckw(**dbconfig)
 ````
-* In the above function we can pass multiple key words argument
+* In the above function we can pass multiple key words argument.
+* We can combine both `*args` and `**kwargs` to make a function take any no and any type of arguments.
+* The below example take both type of argument.
+
+````python
+def myfunc_args(*args, **kwargs):
+    if args:
+        for a in args:
+            print(a, end=" ")
+        print()
+    if kwargs:
+        for k, v in kwargs.items():
+            print(k, v, sep="->", end=" ")
+        print()
+
+
+if __name__ == "__main__":
+    myfunc_args()
+    myfunc_args(1, 2, 3)
+    myfunc_args(a=10, b=20, c=30)
+    myfunc_args(1, 2, 3, a=10, b=20, c=30)
+````
 
 
 
