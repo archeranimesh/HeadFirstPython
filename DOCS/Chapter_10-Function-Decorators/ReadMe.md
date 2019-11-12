@@ -143,6 +143,32 @@ if __name__ == "__main__":
 * In the above `myfunc` we can pass multiple arguments.
 
 
+### Accepting a Dictionary as arguments ###
+* We can also sent multiple key value to a function as arguments.
+* The special notation to read it is `**kwargs`, which makes all the arguments as a Key Value pair.
+* It can even expand an existing dictionary.
+
+````python
+def myfunckw(**kwargs):
+    for k, v in kwargs.items():
+        print(k, v, sep="->", end=" ")
+    if kwargs:
+        print()
+
+
+if __name__ == "__main__":
+    dbconfig = {
+        "host": "127.0.0.1",
+        "user": "vsearch",
+        "password": "hello",
+        "database": "vsearchlogDB",
+    }
+    myfunckw(a=10, b=20)
+    myfunckw(**dbconfig)
+````
+* In the above function we can pass multiple key words argument
+
+
 
 
 
