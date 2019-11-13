@@ -118,6 +118,32 @@ if __name__ == "__main__":
 * In the above example `i` acts as an alias for `inner` function.
 
 
+## Variable argument to function ##
+* There are times when we want to pass variable number of arguments to a function.
+* Python provides a special notation which allows to pass zero or more arguments to a function.
+* The notation is called `*args`, typically `args` is a tuple.
+* We can use this `*` notation to even expand a list.
+
+````python
+def myfunc(*args):
+    for a in args:
+        print(a, end=" ")
+    if args:
+        print()
+
+
+if __name__ == "__main__":
+    values = [1, 2, 3, 4, 5, 6]
+    myfunc(10)
+    myfunc()
+    myfunc(10, 20, 30, 40, 50)
+    myfunc(values)
+    myfunc(*values)
+````
+* In the above `myfunc` we can pass multiple arguments.
+
+
+
 
 
 
