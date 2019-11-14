@@ -97,6 +97,25 @@ if __name__ == "__main__":
 * In the above function the `inner()` is defined inside `outer()` function.
 * We can invoke `inner` only from within `outer()` function.
 
+### Function Returning Function ###
+* We can even return a function in Python.
+
+````python
+def outer():
+    def inner():
+        print("This is Inner")
+
+    print("This is outer, invoking inner")
+    return inner
+
+
+if __name__ == "__main__":
+    i = outer()
+    print(type(i))
+    i()
+````
+
+* In the above example `i` acts as an alias for `inner` function.
 
 
 
