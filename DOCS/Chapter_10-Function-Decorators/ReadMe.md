@@ -77,6 +77,26 @@ if __name__ == "__main__":
 
 * The above example uses `apply()` to invoke different built-in functions like `len`, `id`, `type` and `print`.
 
+### Nested Function ###
+* We can define a new function inside a function.
+* The scope of the inner function is only inside the function.
+* We can also return the inner function.
+
+````python
+def outer():
+    def inner():
+        print("This is Inner")
+    print("This is outer, invoking inner")
+    inner()
+
+
+if __name__ == "__main__":
+    outer()
+````
+
+* In the above function the `inner()` is defined inside `outer()` function.
+* We can invoke `inner` only from within `outer()` function.
+
 
 
 
