@@ -60,6 +60,23 @@ if __name__ == "__main__":
 
 * In the above example none of the line causes an error, so it is valid to pass function to a function.
 
+### Invoking Passed Function ###
+* The function passed as an argument to a function can also be invoked.
+
+````python
+def apply(func: object, value: object) -> object:
+    return func(value)
+
+
+if __name__ == "__main__":
+    (apply(print, 42))
+    print(apply(id, 42))
+    print(apply(type, 42))
+    print(apply(len, "marvin"))
+````
+
+* The above example uses `apply()` to invoke different built-in functions like `len`, `id`, `type` and `print`.
+
 
 
 
