@@ -29,3 +29,12 @@ The solution is to uses the Flask's `session`.
 * Flask `session` is like a dictionary which can store our web application state.
 * Flask `session` makes sure that the data stored in it is available for the entire duration of the web application.
 * We can store and retrieve values from Flask `session` just like any other Python dictionary.
+
+## Decorators ##
+* A decorator allows to augment an existing function with extra code.
+* Decorator's are always prefixed with `@`.
+* We can create a decorator, if we can do these 4 things
+    - How to create a function
+    - Pass a function as an argument to a function.
+    - Return a function from a function
+    - How to process any number and type of argument.
