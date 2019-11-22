@@ -17,8 +17,11 @@ def do_login() -> str:
 
 @app.route("/logout")
 def do_logout() -> str:
-    session.pop("logged_in")
-    return "You are now logged out"
+    if "logged_in" in session:
+        session.pop("logged_in")
+        return "You are now logged out"
+    else:
+        return "Please Login to Logout"
 
 
 @app.route("/status")
