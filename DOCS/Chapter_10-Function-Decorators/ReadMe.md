@@ -15,3 +15,14 @@
     - If the state is preserved in a global variable, we could 
         + The value associated with the global variable can be lost due to loading and un-loading of the app.
         + The global variable will work only for single user, how will it handle multiple users.
+
+
+## Session ##
+We need to achieve these two things to make user authentication work.
+* A way to store variables without using global variables.
+* A way to keep one webapp's user data from interfering with another's.
+
+The solution is to uses the Flask's `session`.
+* Flask's `session` uses these method's
+    - Adds a small identification data to the browser - *cookies*
+    - Links the above to web server using a *session ID*
