@@ -21,3 +21,5 @@ with open('todos.txt') as tasks:
 * `__init__` is invoked as soon as the interpreter see the `with` statement.
 * `__enter__` is invoked soon after the `__init__` is invoked.
 * `__exit__` is invoked at the end of the `with` statement.
+    - `__exit__` take's few extra parameter to inform about wrong full termination of `with` statement.
+* Flask has an internal configuration called `app.config` which is a dictionary.
