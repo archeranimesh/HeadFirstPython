@@ -14,5 +14,7 @@ class UseDatabase:
 
     # https://stackoverflow.com/questions/1984325/explaining-pythons-enter-and-exit
     # this method hold's the teardown code.
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        pass
+    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+        self.conn.commit()
+        self.cursor.close()
+        self.conn.close()
