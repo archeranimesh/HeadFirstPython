@@ -81,4 +81,43 @@ dbconfig = {
 * `.fetchone()` : retrieves a single row of results.
 * `.fetchmany()` : retrieve the number of row that make up the results.
 * `.fetchall()` : retrieve all the row that make up the results.
-  
+
+### DB-API - SQL `insert` ###
+* Insert Query in SQL's will look like this.
+
+````python
+_SQL = """insert into log
+        (phrase, letters, ip, browser_string, results)
+        values
+        ('hitch-hiker', 'aeiou', '127.0.0.1', 'FireFox', "{'e', 'i'}")"""
+cursor.execute(_SQL)
+````
+
+* The above code with hardcoding of values will also work, but we can also pass the parameters.
+
+````python
+_SQL = """insert into log (phrase, letters, ip, browser_string, results)
+            values (%s, %s, %s, %s, %s)"""
+    cursor.execute(
+        _SQL,
+        (
+            req.form["phrase"],
+            req.form["letters"],
+            req.remote_addr,
+            req.user_agent.browser,
+            res,
+        ),
+    )
+````
+
+* This above code works with parametrized arguments.
+* We are using `%s` as a data place holder
+* The values are passed during the `.execute` function.
+    - The `.execute` function expects only 2 parameter, so we are passing the second arguments in a tuple.
+* Each operation of the DataBase is not immediately written on the DB. As the DB's Write operation is costly.
+* If we want to immediately write into the database we should call `.commit`, which will be a costly operation.
+
+### DB-API - Close ###
+* At the end of the operation we should close the cursor and connection
+* `cursor.close()` : This return's `True` on successful close of the cursor.
+* `conn.close()` : This close the connection.
