@@ -48,3 +48,37 @@ create table log(id int auto_increment primary key,
 
 ## DB-API connection to Database ##
 
+### DB-API - Define Connection ###
+* These 4 information is required while connecting toe the MySql DB.
+    - The IP address/name of the computer running the MySql Server.
+    - The user ID to use.
+    - The password associated with the user ID.
+    - The name of the database the user ID wants to interact.
+* These 4 information can be stored in a dictionary and passed onto while creating connection.
+
+````python
+dbconfig = {
+    "host": "127.0.0.1",
+    "user": "vsearch",
+    "password": "hello",
+    "database": "vsearchlogDB",
+}
+````
+
+### DB-API - Establish Connection ###
+* We have to import the MySql Connector.
+    - `import mysql.connector`
+* We should establish connection with the DB Server.
+    - `conn = mysql.connector.connect(**dbconfig)`
+* We also need a `cursor` to execute SQL commands on DB.
+    - `cursor = conn.cursor()`
+
+### DB-API - SQL ###
+* SQL queries are often passed in a `""" """` triple quotes, as the SQL can run into multiple line.
+* `_SQL = """select * from log"""` : the SQL statement is stored.
+* `cursor.execute(_SQL)` : Send the SQL query to the server
+    - The result is not immediately returned, we have request them
+* `.fetchone()` : retrieves a single row of results.
+* `.fetchmany()` : retrieve the number of row that make up the results.
+* `.fetchall()` : retrieve all the row that make up the results.
+  
