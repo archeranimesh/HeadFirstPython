@@ -43,7 +43,10 @@ def view_the_log() -> str:
             contents.append([])
             for item in line.split("|"):
                 contents[-1].append(escape(item))
-    return str(contents)
+    titles = ("Form Data", "Remote_addr", "User_agent", "Results")
+    return render_template(
+        "viewlog.html", the_title="View Log", the_row_titles=titles, the_data=contents,
+    )
 
 
 # making it cloud ready, as the run method will be invoked by cloud.
