@@ -60,3 +60,8 @@ with open('todos.txt') as task:
 * `.read()` : reads the complete content of the file and loads into memory.
 * `escape()` : `Flask` provides a function called `escape` which escape's based on HTML template.
 
+## `split` and `join` ##
+* `'|'.join("hello", "brother")` : joins the two words using the `|` as the separator.
+* `.split('separator')` : splits a string to list based on the separator supplied.
+
+

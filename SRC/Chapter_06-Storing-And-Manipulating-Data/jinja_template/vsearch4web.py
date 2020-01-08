@@ -16,10 +16,7 @@ def entry_page() -> "html":
 # Added log_request, fo adding all request and response onto a file.
 def log_request(req: "flask_request", res: str) -> None:
     with open(os.path.dirname(os.path.realpath(__file__)) + "/vsearch.log", "a") as log:
-        print(req.form, file=log, end=" | ")
-        print(req.remote_addr, file=log, end=" | ")
-        print(req.user_agent, file=log, end=" | ")
-        print(res, file=log)
+        print(req.form, req.remote_addr, req.user_agent, res, file=log, sep=" | ")
 
 
 @app.route("/search4", methods=["POST"])
@@ -40,10 +37,13 @@ def do_search() -> "html":
 
 @app.route("/viewlog")
 def view_the_log() -> str:
+    contents = []
     with open(os.path.dirname(os.path.realpath(__file__)) + "/vsearch.log") as log:
-        # .read(), reads the complete set of logs into memory.
-        contents = log.read()
-        return escape(contents)
+        for line in log:
+            contents.append([])
+            for item in line.split("|"):
+                contents[-1].append(escape(item))
+    return str(contents)
 
 
 # making it cloud ready, as the run method will be invoked by cloud.
