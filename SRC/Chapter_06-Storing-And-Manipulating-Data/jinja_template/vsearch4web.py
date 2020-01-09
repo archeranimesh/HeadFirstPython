@@ -16,9 +16,9 @@ def entry_page() -> "html":
 # Added log_request, fo adding all request and response onto a file.
 def log_request(req: "flask_request", res: str) -> None:
     with open(os.path.dirname(os.path.realpath(__file__)) + "/vsearch.log", "a") as log:
-        print(req.form, file=log)
-        print(req.remote_addr, file=log)
-        print(req.user_agent, file=log)
+        print(req.form, file=log, end=" | ")
+        print(req.remote_addr, file=log, end=" | ")
+        print(req.user_agent, file=log, end=" | ")
         print(res, file=log)
 
 
