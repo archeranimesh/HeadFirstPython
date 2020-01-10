@@ -13,6 +13,7 @@ def entry_page() -> "html":
     )
 
 
+# Added log_request, fo adding all request and response onto a file.
 def log_request(req: "flask_request", res: str) -> None:
     with open(os.path.dirname(os.path.realpath(__file__)) + "/vsearch.log", "a") as log:
         print(req, res, file=log)
@@ -32,6 +33,14 @@ def do_search() -> "html":
         the_title=title,
         the_results=results,
     )
+
+
+@app.route("/viewlog")
+def view_the_log() -> str:
+    with open(os.path.dirname(os.path.realpath(__file__)) + "/vsearch.log") as log:
+        # .read(), reads the complete set of logs into memory.
+        contents = log.read()
+        return contents
 
 
 # making it cloud ready, as the run method will be invoked by cloud.
