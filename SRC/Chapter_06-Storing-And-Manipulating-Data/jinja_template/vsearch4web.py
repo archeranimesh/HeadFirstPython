@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from vsearch import search4letters
-
+import os
 
 app = Flask(__name__)
 
@@ -13,12 +13,18 @@ def entry_page() -> "html":
     )
 
 
+def log_request(req: "flask_request", res: str) -> None:
+    with open(os.path.dirname(os.path.realpath(__file__)) + "/vsearch.log", "a") as log:
+        print(req, res, file=log)
+
+
 @app.route("/search4", methods=["POST"])
 def do_search() -> "html":
     phrase = request.form["phrase"]
     letters = request.form["letters"]
     title = "Here are your results"
     results = str(search4letters(phrase, letters))
+    log_request(request, results)
     return render_template(
         "results.html",
         the_phrase=phrase,
