@@ -21,3 +21,26 @@ In the web application we built in the last chapter, we will try to find the ans
 * `print("text", file=todos)`
         + `print()` takes an argument `file`, which redirect the text to the file.
 * `todos.close() `: The open files stream should be closed, else we can loose the data.
+
+
+## Reading Data from File ##
+* To read a file we can `open()` the file in default mode, which is the `read` mode.
+
+````python
+tasks = open('todo.txt')
+
+for chore in tasks:
+    print(chore)
+
+tasks.close()
+````
+
+* In the above code `todo.txt` is opened in read mode.
+* The python `for` loop when used with a file stream is intelligent enough to read a line of data from the file each time the loop operates.
+* There is already new line at the end of each line in the file, in addition `print()` adds extra line, we can pass `end=""` to stop that extra line.
+* Modes of file open :
+    - `'r'` : Open a file for reading.
+    - `'w'` : Open the file for writing. It empty the file content if present.
+    - `'a'` : Open the file for append. The old content of the file is preserved.
+    - `'x'` : Open a new file, throws error if file exist.
+* `'b'` : The above modes of file open is for textual data, if the file has binary data, append the above modes with `'b'`, like `'ab'` or `a+b`
