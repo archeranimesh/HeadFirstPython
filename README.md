@@ -32,7 +32,7 @@ These are already installed in the system.
 
 
 ### Step - 1 : Setup virtual environment ###
-Virtual Environment is tool provided in python, which helps in segregating different projects based on their dependency. `pip` provide this functionality of virtual environments.
+Virtual Environment is a tool provided in python, which helps in segregating different projects based on their dependency. `pip` provide this functionality of virtual environments.
 
 The below command will run the `venv` module as a script and create a virtual environment and save it in a folder named `.env`
 ````
@@ -46,13 +46,13 @@ source .env/bin/activate
 
 ### Step - 2 : Setup VS Code ###
 
-Open the root folder of the code into VS Code. It will not detect the virtual environment as there is no file with python code. Create a file with `.py` extension. 
+Open the root folder of the code in VS Code. It will not detect the virtual environment as there is no file with python code. Create a file with `.py` extension. 
 
-The moment we create the file, VS Code will ask for the python environment. Select the one which we created as `.env`, as shown below.
+The moment we create the file, VS Code will ask about the python environment. Select the one which we created as `.env`, as shown below.
 
 ![Virtual Environment of VsCode](DOCS/images/VsCodeEnv.png "Virtual Environment in Vs Code")
 
-In my VS Code, I also have enabled the Black code formatter for Python and it is triggered on save of file using these settings.
+In my VS Code, I also have enabled the Black code formatter for Python and it is automatically triggered on saving the file using these settings.
 
 ````
 "python.formatting.provider": "black",
@@ -102,7 +102,7 @@ To recreate the same environment again copy the `requirements.txt` to new path a
 
 ### Conclusion ###
 
-Summing it up, we can safely say that VS Code is that code editor for python and other languages which is highly extensible and yet very beginner friendly. It does not overwhelm a beginner with varied configuration. To enable Python in VS Code we just have to do these steps.
+Summing it up, we can safely say that the VS Code is that code editor for python and other languages which is highly extensible and yet very beginner friendly. It does not overwhelm a beginner with varied configuration. To enable Python in VS Code we just have to do these steps.
 
 * Install Python Extension in VS Code.
 * Enable Virtual environment for segregation of project dependencies. 
