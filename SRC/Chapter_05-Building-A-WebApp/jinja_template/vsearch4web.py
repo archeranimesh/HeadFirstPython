@@ -28,5 +28,8 @@ def do_search() -> "html":
     )
 
 
-# Run the web app in debug mode. It restarts the server everytime we change code.
-app.run(debug=True)
+# making it cloud ready, as the run method will be invoked by cloud.
+# the below run method should only be used when using it locally.
+if __name__ == "__main__":
+    # Run the web app in debug mode. It restarts the server everytime we change code.
+    app.run(debug=True)

@@ -90,3 +90,10 @@ Lets understand the above code one line at a time.
     * `POST` : This method allows a web browser to send some data to server.   
 
 
+## Bullet Points ##
+* We can install packages from PyPi using `pip`.
+* The `__name__` value identifies the currently active name space.
+* The `@` symbol before a function's name identifies it as a decorator.
+    - Decorator let you change the behavior of an existing function without changing the function's code.
+* `Jinja2` is a template engine.
+
