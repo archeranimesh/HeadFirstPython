@@ -5,16 +5,12 @@ from vsearch import search4letters
 app = Flask(__name__)
 
 
+@app.route("/")
 @app.route("/entry")
 def entry_page() -> "html":
     return render_template(
         "entry.html", the_title="Welcome to search4letters on the web"
     )
-
-
-@app.route("/")
-def hello() -> "302":
-    return redirect("/entry")
 
 
 @app.route("/search4", methods=["POST"])

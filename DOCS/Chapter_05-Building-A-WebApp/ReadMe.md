@@ -60,7 +60,8 @@ Lets understand the above code one line at a time.
 * `app.route('/search4, methods=['GET', 'POST']')` : When the URL has to support both `GET` and `POST`
 * `app.run(debug=True)` : When we want the application to run in debug mode, and use that for reloading the web application as soon as there is a code change.
 * Flask comes with a in built object called `request` that provide easy access to posted data.
-* We can redirect using the `redirect` function in `Flask`. This redirects to a particular URL
+* We can redirect using the `redirect` function in `Flask`. This redirects to a particular URL.
+* We can associate multiple `route` to same function, in that case we can avoid the redirect
 
 ## Jinja ##
 * We cannot put complete HTML as raw text string in python, it will become unmanageable.
