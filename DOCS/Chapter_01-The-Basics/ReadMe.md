@@ -118,8 +118,56 @@ else:
 * `:` colon, always signifies the start of block.
 
 
+## Hello World Improved ##
+
+We will try to better the above Hello World which we wrote. The improvements like make the code run multiple time, and sleep for a random time.
+
+Python since is an REPL(READ, EVAL, PRINT, LOOP), every enhancement for a Python code can follow in these two approach. Though Python helps in the approach of experimentation.
+
+* Experimentation
+* Through design. 
 
 
+### Loops ###
+
+* The `for` loop is perfect for controlling looping when we know ahead of time how many iterations is needed.
+    - `for i in [1, 2, 3]:`
+* `while` is used when we do not know how many iterations in advance.
+* `for` loop can iterate over any sequence, list, strings all are sequence.
+    - A sequence is an ordered collection of objects.
+* `for` loop does not need to be told how big the sequence is, they figure the length.
+    - `for ch in "hello!":`
+* `range()` function helps in generating a sequence of numbers on which `for` loop can iterate.
+    - In most basic form `range()` accepts only one integer argument, telling how many times the loop will run.
 
 
+### import ###
+* `import` statement can be used in two ways.
+    - `from datetime import datetime`
+        + This imports a named function into our program's namespace.
+        + This helps in importing without having to link the function back to the imported module.
+        + If two module has same function in a different submodule, than this way of importing will cause namespace collation.
+    - `import time`
+        + This just imports the `time` module.
+        + In this way we have to use the dot-notation syntax to access the module's functionality.
+        + This module has a function called `sleep()`, which stops the execution of program for amount of time passed as argument.
+
+### Random ###
+
+* `dir()`: it displays all the attributes associated with anything in Python.
+* `help()`: it gives Python documentation of related to the name.
+* `random.randint()`: gives a random number between the given number.
+
+
+## Bullet Points ##
+* Python programmer favor experimenting with code snippets before giving the solution.
+* The `for` loop can be used to iterate a fixed number of times.
+    * If you know ahead of time how many times you need a loop, use `for` 
++ When you don't know ahead of time how often you're going to iterate, use Python `while` loop.
++ The `for` loop can iterate over any sequence, as well as execute a fixed number of times.
++ `sleep()` pauses the execution for the number of seconds passed as arguments.
++ `from time import sleep`: imports specific function `sleep` from `time` module.
++ `import time`: importing module we need to give the module name to call the function.
++ `random` has a good function called `randint` which gives a random integer within a specified range.
++ `dir()` and `help()` help in learning about Python function and module.
 
