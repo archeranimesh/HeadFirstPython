@@ -139,6 +139,10 @@ Python since is an REPL(READ, EVAL, PRINT, LOOP), every enhancement for a Python
     - `for ch in "hello!":`
 * `range()` function helps in generating a sequence of numbers on which `for` loop can iterate.
     - In most basic form `range()` accepts only one integer argument, telling how many times the loop will run.
+    - `range()` actually takes 3 parameters
+        + `start`: Number where `range ` starts
+        + `stop`: Number where `range` ends
+        + `step`: default is `1`, it defines for step to take.
 
 
 ### import ###
@@ -170,4 +174,5 @@ Python since is an REPL(READ, EVAL, PRINT, LOOP), every enhancement for a Python
 + `import time`: importing module we need to give the module name to call the function.
 + `random` has a good function called `randint` which gives a random integer within a specified range.
 + `dir()` and `help()` help in learning about Python function and module.
++ Negative numbers in `range()` last arguments changes the direction of range.
 
