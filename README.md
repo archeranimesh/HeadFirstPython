@@ -9,6 +9,7 @@ I am giving all necessary reference and credits for these notes.
 
 ## Table Of Content ##
 1. [Chapter 01 : The Basics](DOCS/Chapter_01-The-Basics/ReadMe.md)
+2. [Chapter 02 : List Data ](DOCS/Chapter_02-List-Data/ReadMe.md)
 
 
 ## Setup of a new Python Repository with Virtual environment and VS Code ##
