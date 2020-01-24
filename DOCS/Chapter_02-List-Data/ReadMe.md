@@ -69,6 +69,21 @@ Four Built-in Data Structures in Python, which means this is available as langua
 * `pop()` : takes an optional index value as its arguments.
     * `pop` removes and returns and object from a list.
     * If no index value is specified it removes the last element of the list.
-    * Calling `pop` on empty list raises error.   
+    * Calling `pop` on empty list raises error.
+* `append()` : adds a single object to an existing list.
+    - passing an empty list in appends, adds that empty list to the existing list.
+* `extend()` : takes a list of object as its argument and adds each of its object to an existing list.   
+    - No changes when an empty list is passed in `extend`.
+* Both `extend()` and `append()` add elements to the end of the list.
+* `insert()` : takes an index value and an object as its arguments.
+
+## Bullet Point ##
+* List is a great way of storing a collection of related objects.
+* List are very similar to array in other languages, but with added functionality, list in python can be extended.
+* List is denoted by square brackets, with items separated by comma. `[}`
+* An empty list is represented by `[]`.
+* `in` operator helps in identifying if an element is present in the list.
+* Due to methods like `append()`, `extend()`, `insert()` and `remove()` we can add and remove elements from list.
+
 
 
