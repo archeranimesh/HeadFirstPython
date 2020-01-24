@@ -86,4 +86,22 @@ Four Built-in Data Structures in Python, which means this is available as langua
 * Due to methods like `append()`, `extend()`, `insert()` and `remove()` we can add and remove elements from list.
 
 
+### List Operation's Continued ###
+* `=` : assignment operator can be used to copy a list, but both the list will point to same content, one is modified other will also be.
+* `copy()` : copy and existing list to another list.
+    - Never use assignment operator to copy a list, always use `copy` method.
+* List supports both indexing using positive numbers and negative, also it support range of index.
+    - Positive index is same as all programming languages.
+        + It counts from left to right.
+    - Negative index gives the element from end of the list
+        + It counts from right to left.
+        + `-1` : always gives the last element of the list.
+* List supports Start, Stop and Step in indexing, which is called **slice**
+    - START: The value where the range begins, default is `0`
+    - STOP: The value where the range end, but the value not included, the default is end of list.
+    - STEP: The step value of how the range will be generated, default is 1.
+    - `letters[start:stop:step]`
+* Slice works on ant sequence in Python.
+
+
 
