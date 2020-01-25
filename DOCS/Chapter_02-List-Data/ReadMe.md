@@ -50,6 +50,8 @@ Four Built-in Data Structures in Python, which means this is available as langua
 
 * List is created using a `[]` brackets.
     - `odds = [1,3,5]`
+* List is a great choice for storing similar objects
+* When the data has identifiable structure we should consider using something else other than list. 
 
 ### List Creation ###
 * Empty list
@@ -101,7 +103,36 @@ Four Built-in Data Structures in Python, which means this is available as langua
     - STOP: The value where the range end, but the value not included, the default is end of list.
     - STEP: The step value of how the range will be generated, default is 1.
     - `letters[start:stop:step]`
-* Slice works on ant sequence in Python.
+* Slice works on any sequence in Python.
+    - Slice does not change the original list in any form.
+* List method change the state of list.
+
+
+### List Iteration ###
+* Python `for` loop knows these things about the list.
+    - Where the start of the list is
+    - How many object it contains
+    - Where the end of the list is
+
+````
+paranoid_android = "Marvin"
+letters = list(paranoid_android)
+
+for char in letters:
+    print("\t", char)
+````
+
+* On each iteration `char` refers to the current object.
+* `letters` is the list to iterate over.
+* The statement which is indented is executed on every loop.
+* In place of the full sequence, we can give just the slice in the `for` loop.
+
+## Bullet Points ##
+* List understand the square brackets notation, which can be used to select the individual objects from any list.
+* Like a lot of other programming language, Python also starts counting from `0`.
+* Python can use negative index to access the elements of the list.
+* Python supports start, stop and step in the brackets notation, which helps in creating a slice of the list.
+
 
 
 
