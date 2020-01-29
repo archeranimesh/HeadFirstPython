@@ -58,7 +58,7 @@ In the above example this line creates a list.
 odds = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,]
 ````
 
-* `=` is called an **assignment operator.
+* `=` is called an **assignment operator**.
 * Variables type need not be pre-defined in python, as it is a dynamically typed language.
 * There is no special line character to signal end of line in python.
 
