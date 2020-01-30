@@ -47,3 +47,10 @@ for k in found:
 * Python `for` loop can be used to iterate over a dictionary. 
 
 
+### Dictionary loops ###
+* The output for a dictionary is not in any order, we can create the order by passing the dictionary to a `sorted()` method, which sorts the dictionary.
+    - `for k in sorted(found):`
+    - `sorted()` does not change the actual ordering of the dictionary.
+* Dictionary have an interesting function called `items()`, which gives access to a key-value pair as the value for a loop variable.
+    - `for k, v in found.items():`
+* 
