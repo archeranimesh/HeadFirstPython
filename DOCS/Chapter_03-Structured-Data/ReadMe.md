@@ -53,4 +53,15 @@ for k in found:
     - `sorted()` does not change the actual ordering of the dictionary.
 * Dictionary have an interesting function called `items()`, which gives access to a key-value pair as the value for a loop variable.
     - `for k, v in found.items():`
-* 
+
+### Dictionary Membership ###
+* We can check if a key exists in a dictionary with the help of `in` operator.
+* We can also use the `not in` operator to check for non membership.
+* `setdefault()` : initializes with a default value if the key is not available in the dictionary.
+
+
+## Bullet Points ##
+* Insertion order is not maintained in Dictionary, we can use `sorted()` method to sort a dictionary.
+* `.item()` allows to iterate over a Key-Value pair. On each iteration it returns a pair of key-value.
+* When we access non existing Key in dictionary, it leads to `KeyError`.
+* `KeyError` can be avoided by using the `in`, `not in` operator, or even we can use the `setdefault()` to initialize the value.
