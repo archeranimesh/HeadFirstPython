@@ -92,4 +92,13 @@ for k in found:
 * `set()` converts any sequence into a set.
 * Union, intersection, difference are some of the well know built-in function of sets.
 
+## Tuples ##
+
+* Tuples solves a specific problem, which is its property to not mutate.
+* Tuples are denoted by `vowels = ("a", "e", "i", "o", "u")`
+    - The `()` are optional, the `,` is what creates the tuple.
+    - A single member tuple is created by `vowels = ('a', )`, notice the comma.
+* Tuples support the `[]` notation to access it's member.
+* Tuple's immutability helps when we have to make sure our data does not change at any cost.
+
 
