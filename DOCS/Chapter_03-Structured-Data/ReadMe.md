@@ -65,3 +65,31 @@ for k in found:
 * `.item()` allows to iterate over a Key-Value pair. On each iteration it returns a pair of key-value.
 * When we access non existing Key in dictionary, it leads to `KeyError`.
 * `KeyError` can be avoided by using the `in`, `not in` operator, or even we can use the `setdefault()` to initialize the value.
+
+
+## Sets ##
+* Sets do not allow duplicate values. This is by far the most valuable information about sets.
+* Sets also support mathematical operations like, union intersection etc.
+* Sets are optimize for fast look-up.
+* Sets syntax looks like this.
+    - `vowels = {'a', 'e', 'i', 'o', u}`
+        + This declaration is similar to dictionary, with the major difference being, the absence of `:` for Key-Value pair.
+* Sets do not maintained the insertion order. It can be ordered with the help of `sorted()` function.
+
+
+### Set Operation. ###
+
+* `in` : it can be used to find the existence of an object inside a set.
+* `union()` : it combines 2 sets.
+* `difference()` : tells what is present in 1 set bit not in other.
+* `intersection()` : Returns the common object in 2 sets.
+
+## Bullet Points ##
+
+* Sets do not allow duplicates.
+* Sets are enclosed in `{}` but they are missing the `:` with key-value pair used in dictionary.
+* Sets also do not maintain the insertion order. `sorted()` helps in getting the order.
+* `set()` converts any sequence into a set.
+* Union, intersection, difference are some of the well know built-in function of sets.
+
+
