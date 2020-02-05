@@ -10,6 +10,8 @@ I am giving all necessary reference and credits for these notes.
 ## Table Of Content ##
 1. [Chapter 01 : The Basics](DOCS/Chapter_01-The-Basics/ReadMe.md)
 2. [Chapter 02 : List Data ](DOCS/Chapter_02-List-Data/ReadMe.md)
+3. [Chapter 03 : Structured Data ](DOCS/Chapter_03-Structured-Data/ReadMe.md)
+4. [Chapter 04 : Code Reuse ](DOCS/Chapter_04-Code-Reuse/ReadMe.md)
 
 
 ## Setup of a new Python Repository with Virtual environment and VS Code ##
