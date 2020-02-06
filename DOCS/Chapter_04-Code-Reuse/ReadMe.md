@@ -44,10 +44,6 @@ def search4vowels():
 * Python function can take multiple arguments, we can pass multiple arguments if it is comma separated.
 
 
-## Function Return ##
-* `return` : it is a keyword with which a Python function returns value to the caller.
-* A function terminates at `return` statement.
-
 ## Boolean ##
 * `bool` : Python has a built-in function called `bool`, which return `True` or `False` based on the input provided.
 * If an object evaluates to `0`, it is always `False`.
@@ -56,3 +52,26 @@ def search4vowels():
 * Critically all non-empty data structure evaluates to True.
 
 
+## Function Return ##
+* `return` : it is a keyword with which a Python function returns value to the caller.
+* A function terminates at `return` statement.
+* Function can also returns multiple values, like a list. Even in python we can return a tuple
+* An empty set is represented by `set()` and not `{}` which is for a dictionary.
+
+## Annotations ##
+* The function we implemented till now, has no way of describing it's input parameter or the return type.
+* The best way to do it, is to put it inside the docstring.
+* Python 3 now supports annotations(type hints).
+* The function annotations are optional and are only informational.
+    - `def search4vowels(word: str) -> set:`
+* The goal of annotations is to make it easier for the user.
+* Annotations are a documentation standard and not a type enforcement mechanism.
+
+
+## Bullet Points ##
+* Function are a name given for a group of code.
+* `def` keywords introduces a function.
+* triple quote strings can be used for multi line comment or for function documentation called doc string.
+* Function can accepts any number of arguments.
+* The `return` statement helps in returning any number of values.
+* Function annotations can be used to document the type of your function's argument and return type.
