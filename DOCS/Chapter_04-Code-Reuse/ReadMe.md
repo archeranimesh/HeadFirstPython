@@ -75,3 +75,20 @@ def search4vowels():
 * Function can accepts any number of arguments.
 * The `return` statement helps in returning any number of values.
 * Function annotations can be used to document the type of your function's argument and return type.
+
+
+## Default Arguments ##
+* Any arguments in a function call can be given default value, which will be used if the caller does not provide with that parameter while calling.
+* We can assign default values by
+    - `def search4letters(phrase: str, letters: str = "Hello") -> set:`
+
+
+## Positional Vs Keyword Arguments. ##
+* We can invoke a function by using key words arguments in-place of depending on the position while passing the values.
+* The traditional way of passing arguments is called positional arguments.
+
+## Bullet Points ##
+* Functions help in reducing complexity of the code, by abstracting a piece of code into a function.
+* Function can be provided with default values, which is used if that value is not passed while calling the function.
+* Keywords arguments are a new way of passing values to a function. It use a key-value pair to pass the value.
+
