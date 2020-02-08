@@ -92,3 +92,41 @@ def search4vowels():
 * Function can be provided with default values, which is used if that value is not passed while calling the function.
 * Keywords arguments are a new way of passing values to a function. It use a key-value pair to pass the value.
 
+
+## Modules ##
+* Modules are an efficient way to distribute function.
+* A file containing a function is a module.
+* Python `import` statement helps in importing both standard modules and user defined.
+* `import` statement search for a modules in a **search path**, if the module is not present in the search path it is difficult to import it.
+
+### Module Import ###
+* Python `import` statement search for a module in these path.
+    - The current working directory.
+    - The interpreter's site-packages directory.
+    - The standard library location.
+* Create a folder and create a python file with the name `vsearch.py`
+    - cd to that folder and, open python terminal and give `import vsearch`. The module is imported.
+* If we change the folder, there will be import error.
+* Python `import` statement does not take path to a file.
+
+### Site-packages ###
+* `setuptools` is used to install site-packages.
+    - It creates a distribution description.
+    - Generate a distribution file.
+    - Install the distribution file. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
