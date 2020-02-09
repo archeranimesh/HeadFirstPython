@@ -112,8 +112,34 @@ def search4vowels():
 ### Site-packages ###
 * `setuptools` is used to install site-packages.
     - It creates a distribution description.
+        + This needs creation of 2 files `setup.py` and `README.txt`
     - Generate a distribution file.
-    - Install the distribution file. 
+    - Install the distribution file.
+* Process to create a distribution packages.
+    * Go to the modules directory.
+    * Give this command based on the operation system
+        * Windows
+            * `py -3 setup.py sdist`
+        * Linux
+            * `python setup.py sdist`
+        * The `setup.py` is the file we created.
+        * `sdist`: is an argument to create a distribution, the default format is `.tar.gz`
+        * The output is a file in this path `dist/vsearch-1.0.tar.gz`
+        * Change the directory to `dist`.
+        * If you are using a virtual environment, activate the environment.
+        * Give this command to install it in the site-packages.
+            * `python -m pip install vsearch-1.0.tar.gz`
+        * It will install the `vsearch` module in the site-packages, either globally or in virtual env.
+        * The path of site packages are in this format.
+            * `.env/lib/python3.7/site-packages/vsearch.py`
+
+## Bullet Points ##
+* A module is one or more functions saved in file.
+* We can share a module if we make sure it is available in 
+    - the current directory
+    - the interpreter's site-packages.
+* Using `setuptools`, we can create a module stored in the interpreter's site-packages.
+
 
 
 
