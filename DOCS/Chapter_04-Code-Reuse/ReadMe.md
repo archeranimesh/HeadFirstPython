@@ -141,6 +141,18 @@ def search4vowels():
 * Using `setuptools`, we can create a module stored in the interpreter's site-packages.
 
 
+## Call by Value/Call by Reference ##
+* We can pass a function as a value or as a reference.
+    - Call by value meaning, the original variables values outside the function is not changed.
+    - Call by reference meaning, the original variable values outside the function changes.
+* Python supports both based on the semantics.
+* For mutable type, it may change the original value and behave like a call by reference.
+* For immutable type, it may not change the original value and behave like a call by value.
+* Even for mutable type, how we are using the value inside the function can determine if it is call by value or reference.
+    - `num = num * 2`, changes only local to the function
+    - `num.append('hello')`, changes the original value in the caller.
+
+
 
 
 
