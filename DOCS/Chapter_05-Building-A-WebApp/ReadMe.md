@@ -29,3 +29,30 @@
 
 ### Hello World Flask Application ###
 
+````python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello() -> str:
+    return "Hello world from flask"
+
+
+app.run()
+````
+Lets understand the above code one line at a time.
+
+* `from flask import Flask` : We are importing `Flask` class from `flask` module.
+* `app = Flask(__name__)` : The `Flask` object is created and assigned to `app` object.
+    - `__name__` : It provides the currently active module. 
+    - `Flask` class needs to know the current value of `__name__` when creating new flask object.
+    - `Flask` with this one line of code have abstracted a lot of initial setup for web development away from the programmer.
+* `@app.route("/")` : This introduces a new concept in python called **Decorators**.
+    - Decorators adjust the behavior of an existing function without actually changing the function code.
+    - Decorators can be applied to both function and classes, but if applied primarily applied to function.
+    - The above decorators makes an arrangement that when the web application is requested of `/` page, it invokes the `hello()` function.
+* The next is the function definition.
+* `app.run()` : Its ask flask to run the web application.  
+
+
