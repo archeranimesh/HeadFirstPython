@@ -53,6 +53,17 @@ Lets understand the above code one line at a time.
     - Decorators can be applied to both function and classes, but if applied primarily applied to function.
     - The above decorators makes an arrangement that when the web application is requested of `/` page, it invokes the `hello()` function.
 * The next is the function definition.
-* `app.run()` : Its ask flask to run the web application.  
+* `app.run()` : Its ask flask to run the web application.
+* `127.0.0.1` : This is the loop back URL, which is also called as localhost.
+* `:5000` : The protocol port number on which the server is running.  
+
+## Jinja ##
+* We cannot put complete HTML as raw text string in python, it will become unmanageable.
+* We can always use a **template engine**.
+* We can define a top level template, called **base template**, which is then inherited by others.
+* `Jinja2` is the template engine shipped with `Flask`.
+* We add special characters inside HTML, which is understood or replaced by `Jinja`
+    - `{{ TEXT }}` : The value of `TEXT` will be provided by `jinja` before rendering.
+    - `{% block start %}, {% end block %}`: A block of HTML code will be supplied by `jinja`.
 
 
