@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from vsearch import search4letters
 
 
@@ -17,9 +17,12 @@ def hello() -> str:
     return "Hello world from flask"
 
 
-@app.route("/search")
+@app.route("/search4", methods=["POST"])
 def do_search() -> str:
-    return str(search4letters("life, the universe, and everything", "eiru"))
+    phrase = request.form["phrase"]
+    letters = request.form["letters"]
+    return str(search4letters(phrase, letters))
 
 
-app.run()
+# Run the web app in debug mode. It restarts the server everytime we change code.
+app.run(debug=True)

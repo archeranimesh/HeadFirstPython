@@ -56,6 +56,9 @@ Lets understand the above code one line at a time.
 * `app.run()` : Its ask flask to run the web application.
 * `127.0.0.1` : This is the loop back URL, which is also called as localhost.
 * `:5000` : The protocol port number on which the server is running.  
+* The `app.route()`, takes an optional parameter of the methods it supports like `POST`.
+* `app.route('/search4, methods=['GET', 'POST']')` : When the URL has to support both `GET` and `POST`
+* `app.run(debug=True)` : When we want the application to run in debug mode, and use that for reloading the web application as soon as there is a code change.
 
 ## Jinja ##
 * We cannot put complete HTML as raw text string in python, it will become unmanageable.
@@ -69,6 +72,7 @@ Lets understand the above code one line at a time.
 * `Flask` requires the web-app to be in this folder structure.
     - `static` : the static files like css.
     - `templates` : the templates are stored here.
+
 
 ## HTTP Error Codes ##
 * HTTP is the protocol used to communicate between browser and servers.
