@@ -65,5 +65,21 @@ Lets understand the above code one line at a time.
 * We add special characters inside HTML, which is understood or replaced by `Jinja`
     - `{{ TEXT }}` : The value of `TEXT` will be provided by `jinja` before rendering.
     - `{% block start %}, {% end block %}`: A block of HTML code will be supplied by `jinja`.
+* `render_template` function needs to be imported from `flask`
+* `Flask` requires the web-app to be in this folder structure.
+    - `static` : the static files like css.
+    - `templates` : the templates are stored here.
+
+## HTTP Error Codes ##
+* HTTP is the protocol used to communicate between browser and servers.
+* Each HTTP request is serviced with a HTTP response and a status code.
+* `100` to `199` : These are informational messages.
+* `200` to `299` : These are success messages.
+* `300` to `399` : These are re-direction messages.
+* `400` to `499` : These are client-error messages. The request from client is not understood by the server.
+* `500` to `599` : These are server error messages.
+* There are few handful of HTTP methods, but we are focused on these 2,
+    * `GET` : This method is used to request information from server.
+    * `POST` : This method allows a web browser to send some data to server.   
 
 
