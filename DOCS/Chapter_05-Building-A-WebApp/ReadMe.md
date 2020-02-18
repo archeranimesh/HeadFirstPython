@@ -59,6 +59,7 @@ Lets understand the above code one line at a time.
 * The `app.route()`, takes an optional parameter of the methods it supports like `POST`.
 * `app.route('/search4, methods=['GET', 'POST']')` : When the URL has to support both `GET` and `POST`
 * `app.run(debug=True)` : When we want the application to run in debug mode, and use that for reloading the web application as soon as there is a code change.
+* Flask comes with a in built object called `request` that provide easy access to posted data.
 
 ## Jinja ##
 * We cannot put complete HTML as raw text string in python, it will become unmanageable.
