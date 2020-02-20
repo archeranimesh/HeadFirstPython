@@ -20,12 +20,19 @@ if __name__ == '__main__':
         number = "0"+str(number)
     number = str(number)
 
+    chapter_no += number
+
     chapter_name = arguments[1]
-    chapter_name.replace(" ", "-")
+    chapter_name = chapter_name.title().replace(" ", "-")
+
+    dir_to_create = chapter_no +"-" + chapter_name
     print("progam name: ", program_name, " arguments: ", arguments)
+    print("dir_to_create: ", dir_to_create)
     try:
-        os.makedirs('DOCS/'+chapter_no+number+chapter_name+"/"+readme_file_name)
-        os.makedirs('SRC/'+chapter_no+number+chapter_name+"/")
+        os.makedirs('DOCS/'+dir_to_create)
+        os.makedirs('SRC/'+ dir_to_create)
+        os.chdir('DOCS/'+dir_to_create)
+        os.system('touch ReadMe.md')
     except FileExistsError:
         print("The directory already exist")
 
