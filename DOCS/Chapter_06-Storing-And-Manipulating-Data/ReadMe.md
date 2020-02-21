@@ -43,4 +43,18 @@ tasks.close()
     - `'w'` : Open the file for writing. It empty the file content if present.
     - `'a'` : Open the file for append. The old content of the file is preserved.
     - `'x'` : Open a new file, throws error if file exist.
-* `'b'` : The above modes of file open is for textual data, if the file has binary data, append the above modes with `'b'`, like `'ab'` or `a+b`
+* `'b'` : The above modes of file open is for textual data, if the file has binary data, append the above modes with `'b'`, like `'ab'` or `a+b`.
+
+## `with` statement ##
+
+* `with` statement is preferred in place of the `open`, process and `close` stages.
+
+````python
+with open('todos.txt') as task:
+    for chore in tasks:
+        print(chore, end="")
+````
+* `with` statement is smart enough to remember to call `close` on our behalf.
+* `with` statement conforms to a coding convention called **context management protocol**.
+* `with` statement manages the context within the block it runs.
+
