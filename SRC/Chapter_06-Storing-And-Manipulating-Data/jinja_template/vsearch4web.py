@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, escape
 from vsearch import search4letters
 import os
 
@@ -16,7 +16,10 @@ def entry_page() -> "html":
 # Added log_request, fo adding all request and response onto a file.
 def log_request(req: "flask_request", res: str) -> None:
     with open(os.path.dirname(os.path.realpath(__file__)) + "/vsearch.log", "a") as log:
-        print(req, res, file=log)
+        print(req.form, file=log)
+        print(req.remote_addr, file=log)
+        print(req.user_agent, file=log)
+        print(res, file=log)
 
 
 @app.route("/search4", methods=["POST"])
@@ -40,7 +43,7 @@ def view_the_log() -> str:
     with open(os.path.dirname(os.path.realpath(__file__)) + "/vsearch.log") as log:
         # .read(), reads the complete set of logs into memory.
         contents = log.read()
-        return contents
+        return escape(contents)
 
 
 # making it cloud ready, as the run method will be invoked by cloud.

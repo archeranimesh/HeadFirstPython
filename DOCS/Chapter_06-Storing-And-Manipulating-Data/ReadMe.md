@@ -57,4 +57,6 @@ with open('todos.txt') as task:
 * `with` statement is smart enough to remember to call `close` on our behalf.
 * `with` statement conforms to a coding convention called **context management protocol**.
 * `with` statement manages the context within the block it runs.
+* `.read()` : reads the complete content of the file and loads into memory.
+* `escape()` : `Flask` provides a function called `escape` which escape's based on HTML template.
 
