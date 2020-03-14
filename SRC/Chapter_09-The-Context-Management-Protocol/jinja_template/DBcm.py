@@ -3,8 +3,8 @@ import mysql.connector
 
 class UseDatabase:
     # this method performs initialization
-    def __init__(self):
-        pass
+    def __init__(self, config: dict) -> None:
+        self.configuration = config
 
     # this method add's the setup code
     def __enter__(self):
