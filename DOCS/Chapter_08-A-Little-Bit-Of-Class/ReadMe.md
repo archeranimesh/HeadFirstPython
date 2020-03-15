@@ -82,3 +82,18 @@
     - `0x10aad9150`
 * This is the default representation by the `object` class of the method `__repr__`
 
+
+## Bullet Points ##
+* Python Classes let you share behavior and state.
+* Methods are functions and State are variable.
+* The `class` keyword introduces a new class in code.
+* Creating a new object from a class looks very like a function call.
+* When an object is created from a class, the object shares the class code.
+* The object shares the code but maintains own copy of attributes.
+* `self` is the object reference inside a class.
+* `__init__` method is one of the many magic methods in Python.
+* Attributes are initialized by the `__init__` method.
+* `__repr__` is another magic method which allows to control the object representation.
+
+
+
