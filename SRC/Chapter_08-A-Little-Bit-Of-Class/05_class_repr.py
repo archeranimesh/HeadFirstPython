@@ -6,8 +6,13 @@ class CountFromBy:
     def increase(self) -> None:
         self.val += self.incr
 
+    def __repr__(self) -> str:
+        return str(self.val)
+
 
 a = CountFromBy(100, 10)
-a.increase()
-print(a.incr, a.val)
-print(a)
+
+print("Object a = ", a)
+print("Type(a) = ", type(a))
+print("id(a) = ", id(a))
+print("hex(id(a)) = ", hex(id(a)))

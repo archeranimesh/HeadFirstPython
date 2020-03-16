@@ -63,4 +63,22 @@
     - `__eq__` : when we want to make sure our class reacts to `==` operator.
 
 
+### __init__ ###
+* We can pass arguments to `__init__`.
+* To pass value to `__init__`, we have to pass arguments while calling the class constructor.
+    - `CountFromBy(100, 10)`
+* When creating objects, any argument values provided to the class are passed to the `__init__` method.
+* We can access the attribute values by combining the object's name with the attribute name.
+    - `a.val`
+* When using the object name on its own, the interpreter spits back a cryptic message.
+    - `<__main__.CountFromBy object at 0x104194150>`
+
+### Object Reference ###
+* When we print the value of a object, we get this value
+    - `<__main__.CountFromBy object at 0x10aad9150>`
+* This value is combination of the output from `type`
+    - `<class '__main__.CountFromBy'>`
+* The value of `id` in `hex`
+    - `0x10aad9150`
+* This is the default representation by the `object` class of the method `__repr__`
 
