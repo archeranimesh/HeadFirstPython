@@ -42,5 +42,25 @@
     - `CountFromBy.increase(c)` by the interpreter. The object is passed as a parameters to the method.
 * The first argument of a methods is called `self` by convention in Python.
 * The interpreter supplies the first argument to a method, we do not have to pass it explicitly.
-* Not adding `self` to a method definition cause to raise `TypeError`  
+* Not adding `self` to a method definition cause to raise `TypeError`.
+* Each Object maintains it's own copy of attributes, which is possible the use of `self`.
+
+## Variable scope ##
+* A variable defined inside a function's suite, exists while the function runs.
+* Outside the function suite these variable's give `NameError:`
+* When we attach a variable with `self` inside a class method, it's scope is preserved outside the scope of the method.
+* The value in `self` is an alias that points back to the object invoking the method.
+
+## Class Init ##
+
+* In Python, we have to initialize variables with a starting value, before we can use them in expression.
+* In Python Class, the magic method to initialize if `__init__()`
+* The methods are called dunders, and it provide hooks into every class standard behavior.
+* The `__init__` standard behavior is implemented in a class called `object`.
+* All Python Class automatically inherits from `object` class.
+* There are certain times when we would like to override the dunder methods.
+    - `__init__` : when initializing a class
+    - `__eq__` : when we want to make sure our class reacts to `==` operator.
+
+
 
