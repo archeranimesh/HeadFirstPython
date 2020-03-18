@@ -35,3 +35,12 @@
     - Both the above rule is not enforced by the interpreter.
 * Each object created from a class shares the behaviors (methods), but maintains its own copy of any state (the attribute).
 
+## Method Invocation ##
+* A Object can invoke a method from a class in this way.
+    - `c.increase()`
+* This is interpreted as 
+    - `CountFromBy.increase(c)` by the interpreter. The object is passed as a parameters to the method.
+* The first argument of a methods is called `self` by convention in Python.
+* The interpreter supplies the first argument to a method, we do not have to pass it explicitly.
+* Not adding `self` to a method definition cause to raise `TypeError`  
+
