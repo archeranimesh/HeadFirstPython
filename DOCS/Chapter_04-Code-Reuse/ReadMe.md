@@ -152,6 +152,11 @@ def search4vowels():
     - `num = num * 2`, changes only local to the function
     - `num.append('hello')`, changes the original value in the caller.
 
+## PEP - 8 ##
+* We can use Python modules like `pytest` framework and `pep8` plugin to check the compliance of our code to pep8.
+* 
+
+
 
 
 
