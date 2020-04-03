@@ -26,3 +26,6 @@ The solution is to uses the Flask's `session`.
 * Flask's `session` uses these method's
     - Adds a small identification data to the browser - *cookies*
     - Links the above to web server using a *session ID*
+* Flask `session` is like a dictionary which can store our web application state.
+* Flask `session` makes sure that the data stored in it is available for the entire duration of the web application.
+* We can store and retrieve values from Flask `session` just like any other Python dictionary.
