@@ -38,3 +38,31 @@ The solution is to uses the Flask's `session`.
     - Pass a function as an argument to a function.
     - Return a function from a function
     - How to process any number and type of argument.
+
+### Function Passing Function ###
+* We can pass function into a function in Python.
+* The reason being everything is an object in Python.
+
+````python
+msg = "Hello from Head First Python 2e"
+
+
+def hello():
+    print(msg)
+
+
+if __name__ == "__main__":
+    print("Id of message is: ", id(msg))
+    print("Id of function is: ", id(hello))
+    print("type of function is: ", type(hello))
+    print(type(id))
+````
+
+* In the above example none of the line causes an error, so it is valid to pass function to a function.
+
+
+
+
+
+
+
