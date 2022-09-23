@@ -23,7 +23,7 @@ packaging==20.1
 pathspec==0.7.0
 pep8==1.7.1
 pluggy==0.13.1
-protobuf==3.6.1
+protobuf==3.18.3
 py==1.8.1
 pylint==2.4.4
 pyparsing==2.4.6
